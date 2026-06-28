@@ -47,26 +47,16 @@ public class AuthServiceImpl implements IAuthService {
     /**
      * Register a new user with the provided registration request.
      * @param request The registration request containing user details.
-     * @return ServiceResponse containing the result of the registration process.
+     * @return ServiceResponse<Void>
      */
     @Override
-    public ServiceResponse<AuthResponse> register(RegisterRequest request) {
-        // Check if pseudo or email already exists
+    public ServiceResponse<Void> register(RegisterRequest request) {
         ServiceResponse<User> created = userService.create(
                 new User(request.getPseudo(), request.getEmail(), request.getPassword()));
         if (created.getData() == null) {
             return new ServiceResponse<>(created.getCode(), created.getMessage(), null);
         }
-        User savedUser = created.getData();
-        String accessToken = jwtService.generateAccessToken(savedUser.getId(), savedUser.getEmail());
-        return new ServiceResponse<>("1000", "Register successful",
-                new AuthResponse(
-                        accessToken,
-                        null,
-                        savedUser.getId(),
-                        savedUser.getPseudo(),
-                        accessTokenExpiration,
-                        mapRoles(savedUser)));
+        return new ServiceResponse<>("1000", "Succès de l'inscription.", null);
     }
 
     /**
@@ -85,12 +75,13 @@ public class AuthServiceImpl implements IAuthService {
             user = userService.findByPseudo(request.getIdentifier()).getData();
         }
         if (user == null || !passwordEncoder.matches(request.getPassword(), user.getPassword())) {
-            return new ServiceResponse<>("1100", "Invalid credentials", null);
+            return new ServiceResponse<>("1100", "Identifiants invalides", null);
         }
         String accessToken = jwtService.generateAccessToken(user.getId(), user.getEmail());
         ServiceResponse<String> refreshToken = refreshTokenService
                 .createAndPersistRefreshToken(user, device, ipAddress, userAgent);
-        return new ServiceResponse<>("1000", "Login successful",
+        String message = "Succès de la connection : bienvenue " + user.getPseudo() + " !";
+        return new ServiceResponse<>("1000", message,
                 new AuthResponse(
                         accessToken,
                         refreshToken.getData(),
@@ -144,7 +135,7 @@ public class AuthServiceImpl implements IAuthService {
         String accessToken = jwtService.generateAccessToken(user.getId(), user.getEmail());
         String newRawToken = rotatedToken.getData();
 
-        return new ServiceResponse<>("1002", "Token refreshed successfully",
+        return new ServiceResponse<>("1002", "Le token a été actualisé avec succès.",
                 new AuthResponse(
                         accessToken,
                         newRawToken,
@@ -160,12 +151,12 @@ public class AuthServiceImpl implements IAuthService {
         ServiceResponse<User> userResponse = userService.findById(UUID.fromString(userId));
 
         if (userResponse.getData() == null) {
-            return new ServiceResponse<>("1101", "Account not found", null);
+            return new ServiceResponse<>("1101", "Compte introuvable", null);
         }
 
         User user = userResponse.getData();
 
-        return new ServiceResponse<>("1000", "Authentication successful",
+        return new ServiceResponse<>("1000", "Authentification réussie",
                 new AuthResponse(
                         null,
                         null,

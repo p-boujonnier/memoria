@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: charona
+
+  profiles:
+    active: jpa
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/memoria
+    username: your-username
+    password: your-password
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/master.xml
+    default-schema: charona
+    liquibase-schema: charona
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: charona
+        format_sql: true
+    show-sql: true
+
+server:
+  port: 8080
+
+jwt:
+  secret: clef-H256
+  access-token:
+    expiration: 86400000
+  refresh-token:
+    expiration: 604800000
+    cookie-secure: false
+
+libria:
+  base-url: http://localhost:8083

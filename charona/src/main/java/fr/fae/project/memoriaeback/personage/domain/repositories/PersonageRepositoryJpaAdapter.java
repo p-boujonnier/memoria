@@ -1,5 +1,6 @@
 package fr.fae.project.memoriaeback.personage.domain.repositories;
 
+import fr.fae.project.memoriaeback.personage.api.mappers.PersonageMapper;
 import fr.fae.project.memoriaeback.personage.domain.models.Personage;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
@@ -13,15 +14,18 @@ import java.util.UUID;
 public class PersonageRepositoryJpaAdapter implements IPersonageRepository{
     // Injected dependencies
     private final PersonageJpaRepository personageJpaRepository;
+    private final PersonageMapper personageMapper;
 
     // Constructors
-    public PersonageRepositoryJpaAdapter(PersonageJpaRepository personageJpaRepository) {
+    public PersonageRepositoryJpaAdapter(PersonageJpaRepository personageJpaRepository, PersonageMapper personageMapper) {
         this.personageJpaRepository = personageJpaRepository;
+        this.personageMapper = personageMapper;
     }
 
     // Methods
     @Override
     public Optional<Personage> findById(UUID id) {
+
         return personageJpaRepository.findById(id);
     }
 

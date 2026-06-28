@@ -7,7 +7,7 @@ import fr.fae.project.memoriaeback.common.ServiceResponse;
 
 public interface IAuthService {
 
-    ServiceResponse<AuthResponse> register(RegisterRequest request);
+    ServiceResponse<Void> register(RegisterRequest request);
 
     ServiceResponse<AuthResponse> login(LoginRequest request, String device, String ipAddress, String userAgent);
 
