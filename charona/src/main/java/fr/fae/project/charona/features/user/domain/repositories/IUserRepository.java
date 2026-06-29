@@ -1,0 +1,24 @@
+package fr.fae.project.charona.features.user.domain.repositories;
+
+import fr.fae.project.charona.features.user.domain.models.User;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+public interface IUserRepository {
+
+    // CRUD operations
+    Optional<User> findById(UUID id);
+    Optional<User> findByPseudo(String pseudo);
+    Optional<User> findByEmail(String email);
+    List<User> findAll();
+    User save(User user);
+    void deleteById(UUID id);
+
+    // Utils
+    boolean existsByPseudo(String pseudo);
+    boolean existsByEmail(String email);
+    boolean existsByPseudoAndIdNot(String pseudo, UUID id);
+    boolean existsByEmailAndIdNot(String email, UUID id);
+}

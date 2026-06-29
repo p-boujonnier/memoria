@@ -1,7 +1,7 @@
 package fr.fae.project.charona.seeder;
 
-import fr.fae.project.charona.account.user.application.services.IUserService;
-import fr.fae.project.charona.account.user.domain.User;
+import fr.fae.project.charona.features.user.domain.services.IUserService;
+import fr.fae.project.charona.features.user.domain.models.User;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
