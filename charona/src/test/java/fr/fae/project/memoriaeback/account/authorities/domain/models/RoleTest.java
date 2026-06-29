@@ -1,5 +1,6 @@
 package fr.fae.project.memoriaeback.account.authorities.domain.models;
 
+import fr.fae.project.charona.account.authorities.domain.models.Role;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

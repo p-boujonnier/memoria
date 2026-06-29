@@ -1,0 +1,65 @@
+package fr.fae.project.charona.account.user.domain.repositories;
+
+import fr.fae.project.charona.account.user.domain.User;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+@Profile("jpa")
+@Repository
+public class UserRepositoryJpaAdapter implements IUserRepository {
+    // Injected dependencies
+    private final UserJpaRepository userJpaRepository;
+
+    // Constructors
+    public UserRepositoryJpaAdapter(UserJpaRepository userJpaRepository) {
+        this.userJpaRepository = userJpaRepository;
+    }
+
+    // Methods
+    @Override
+    public Optional<User> findById(UUID id) {
+        return userJpaRepository.findById(id);
+    }
+    @Override
+    public Optional<User> findByPseudo(String pseudo) {
+        return userJpaRepository.findByPseudo(pseudo);
+    }
+    @Override
+    public Optional<User> findByEmail(String email) {
+        return userJpaRepository.findByEmail(email);
+    }
+    @Override
+    public List<User> findAll() {
+        return userJpaRepository.findAll();
+    }
+    @Override
+    public User save(User user) {
+        return userJpaRepository.save(user);
+    }
+    @Override
+    public void deleteById(UUID id) {
+        userJpaRepository.deleteById(id);
+    }
+
+    // Utils
+    @Override
+    public boolean existsByEmail(String email) {
+        return userJpaRepository.existsByEmail(email);
+    }
+    @Override
+    public boolean existsByPseudo(String pseudo) {
+        return userJpaRepository.existsByPseudo(pseudo);
+    }
+    @Override
+    public boolean existsByPseudoAndIdNot(String pseudo, UUID id) {
+        return userJpaRepository.existsByPseudoAndIdNot(pseudo, id);
+    }
+    @Override
+    public boolean existsByEmailAndIdNot(String email, UUID id) {
+        return userJpaRepository.existsByEmailAndIdNot(email, id);
+    }
+}
