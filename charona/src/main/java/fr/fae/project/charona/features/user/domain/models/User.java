@@ -1,7 +1,7 @@
 package fr.fae.project.charona.features.user.domain.models;
 
 import fr.fae.project.charona.features.auth.domain.models.RefreshToken;
-import fr.fae.project.charona.features.user.domain.models.enums.Role;
+import fr.fae.project.charona.features.role.domain.models.Role;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -9,9 +9,8 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users", schema = "charona")
 public class User {
-
 
     // Attributes
     @Id
@@ -30,25 +29,28 @@ public class User {
     @OneToMany(
             mappedBy = "user",
             cascade = CascadeType.REMOVE,
-            orphanRemoval = true, fetch = FetchType.LAZY)
+            orphanRemoval = true,
+            fetch = FetchType.LAZY)
     private List<RefreshToken> refreshTokens = new ArrayList<>();
 
-    @ElementCollection
-    @Enumerated(EnumType.STRING)
-    @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
-    @Column(name = "role")
-    private List<Role> roles;
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "user_roles",
+            schema = "charona",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private List<Role> roles = new ArrayList<>();
 
     // Constructors
-    public User() {
-        this.setRoles();
-    }
+    public User() {}
+
     public User(String pseudo, String email, String password) {
         this.setPseudo(pseudo);
         this.setEmail(email);
         this.setPassword(password);
-        this.setRoles();
     }
+
     public User(UUID id, String pseudo, String email, String password) {
         this(pseudo, email, password);
         this.setId(id);
@@ -83,16 +85,9 @@ public class User {
         return password;
     }
 
-    public void setRoles() {
-        this.roles = new ArrayList<>(List.of(Role.PLAYER));
-    }
-    public void addRole(Role role) {
-        this.roles.add(role);
-    }
-    public void removeRole(Role role) {
-        this.roles.remove(role);
-    }
-    public List<Role> getRoles() {
-        return roles;
-    }
+    public List<Role> getRoles() { return roles; }
+    public void setRoles(List<Role> roles) { this.roles = roles; }
+    public void addRole(Role role) { this.roles.add(role); }
+    public void removeRole(Role role) { this.roles.remove(role); }
 }
+
