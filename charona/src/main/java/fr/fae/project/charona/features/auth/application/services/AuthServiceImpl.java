@@ -1,15 +1,15 @@
 package fr.fae.project.charona.features.auth.application.services;
 
+import fr.fae.project.charona.features.auth.domain.models.RefreshToken;
+import fr.fae.project.charona.features.auth.domain.services.IAuthService;
+import fr.fae.project.charona.features.auth.domain.services.IRefreshTokenService;
 import fr.fae.project.charona.features.auth.infrastructure.api.dto.requests.LoginRequest;
 import fr.fae.project.charona.features.auth.infrastructure.api.dto.requests.RegisterRequest;
 import fr.fae.project.charona.features.auth.infrastructure.api.dto.responses.AuthResponse;
-import fr.fae.project.charona.security.jwt.JwtService;
-import fr.fae.project.charona.features.auth.domain.services.IRefreshTokenService;
-import fr.fae.project.charona.features.auth.domain.models.RefreshToken;
-import fr.fae.project.charona.features.auth.domain.services.IAuthService;
-import fr.fae.project.charona.features.user.domain.services.IUserService;
+import fr.fae.project.charona.features.role.domain.models.Role;
 import fr.fae.project.charona.features.user.domain.models.User;
-import fr.fae.project.charona.features.user.domain.models.enums.Role;
+import fr.fae.project.charona.features.user.domain.services.IUserService;
+import fr.fae.project.charona.security.jwt.JwtService;
 import fr.fae.project.charona.shared.ServiceResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -164,11 +164,11 @@ public class AuthServiceImpl implements IAuthService {
                         user.getId(),
                         user.getPseudo(),
                         0,
-                        user.getRoles().stream().map(Role::name).collect(Collectors.toList()))
+                        user.getRoles().stream().map(Role::getCode).collect(Collectors.toList()))
         );
     }
 
     private List<String> mapRoles(User user) {
-        return user.getRoles().stream().map(Role::name).collect(Collectors.toList());
+        return user.getRoles().stream().map(Role::getCode).collect(Collectors.toList());
     }
 }

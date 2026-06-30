@@ -1,8 +1,8 @@
 package fr.fae.project.charona.features.user.infrastructure.api.controllers;
 
-import fr.fae.project.charona.features.user.infrastructure.api.dto.requests.UserCreateRequest;
-import fr.fae.project.charona.features.user.infrastructure.api.dto.requests.UserUpdateRequest;
-import fr.fae.project.charona.features.user.infrastructure.api.dto.responses.UserPublicResponse;
+import fr.fae.project.charona.features.user.infrastructure.api.dtos.requests.UserCreateRequest;
+import fr.fae.project.charona.features.user.infrastructure.api.dtos.requests.UserUpdateRequest;
+import fr.fae.project.charona.features.user.infrastructure.api.dtos.responses.UserPublicResponse;
 import fr.fae.project.charona.features.user.infrastructure.api.mappers.UserMapper;
 import fr.fae.project.charona.shared.ServiceResponse;
 import fr.fae.project.charona.features.user.domain.services.IUserService;

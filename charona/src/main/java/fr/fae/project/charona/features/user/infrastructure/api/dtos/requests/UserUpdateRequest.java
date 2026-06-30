@@ -1,4 +1,4 @@
-package fr.fae.project.charona.features.user.infrastructure.api.dto.requests;
+package fr.fae.project.charona.features.user.infrastructure.api.dtos.requests;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
