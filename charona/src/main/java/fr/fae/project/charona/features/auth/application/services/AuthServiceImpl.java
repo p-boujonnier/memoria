@@ -52,6 +52,7 @@ public class AuthServiceImpl implements IAuthService {
      */
     @Override
     public ServiceResponse<Void> register(RegisterRequest request) {
+
         ServiceResponse<User> created = userService.create(
                 new User(request.getPseudo(), request.getEmail(), request.getPassword()));
         if (created.getData() == null) {

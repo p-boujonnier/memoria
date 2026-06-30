@@ -53,10 +53,10 @@ public class UserServiceImpl implements IUserService {
     @Override
     public ServiceResponse<User> create(User user) {
         if (userRepository.existsByPseudo(user.getPseudo())) {
-            return new ServiceResponse<>("2102", "Pseudo already taken", null);
+            return new ServiceResponse<>("2102", "Désolé, ce pseudo est déjà utilisé.", null);
         }
         if (userRepository.existsByEmail(user.getEmail())) {
-            return new ServiceResponse<>("2101", "Email already in use", null);
+            return new ServiceResponse<>("2101", "Désolé, mais cet email est déjà utilisé.", null);
         }
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
