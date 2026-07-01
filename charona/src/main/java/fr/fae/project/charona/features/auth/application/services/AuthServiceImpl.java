@@ -7,6 +7,7 @@ import fr.fae.project.charona.features.auth.infrastructure.api.dto.requests.Logi
 import fr.fae.project.charona.features.auth.infrastructure.api.dto.requests.RegisterRequest;
 import fr.fae.project.charona.features.auth.infrastructure.api.dto.responses.AuthResponse;
 import fr.fae.project.charona.features.role.domain.models.Role;
+import fr.fae.project.charona.features.role.domain.services.IAuthoritiesService;
 import fr.fae.project.charona.features.user.domain.models.User;
 import fr.fae.project.charona.features.user.domain.services.IUserService;
 import fr.fae.project.charona.security.jwt.JwtService;
@@ -16,12 +17,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
 public class AuthServiceImpl implements IAuthService {
-
 
     @Value("${jwt.access-token.expiration}")
     private long accessTokenExpiration;
@@ -31,17 +30,20 @@ public class AuthServiceImpl implements IAuthService {
     private final JwtService jwtService;
     private final IRefreshTokenService refreshTokenService;
     private final PasswordEncoder passwordEncoder;
+    private final IAuthoritiesService authoritiesService;
 
     // Constructors
     public AuthServiceImpl(
             IUserService userService,
             JwtService jwtService,
             IRefreshTokenService refreshTokenService,
-            PasswordEncoder passwordEncoder) {
+            PasswordEncoder passwordEncoder,
+            IAuthoritiesService authoritiesService) {
         this.userService = userService;
         this.jwtService = jwtService;
         this.refreshTokenService = refreshTokenService;
         this.passwordEncoder = passwordEncoder;
+        this.authoritiesService = authoritiesService;
     }
 
     // Methods
@@ -52,13 +54,18 @@ public class AuthServiceImpl implements IAuthService {
      */
     @Override
     public ServiceResponse<Void> register(RegisterRequest request) {
-
         ServiceResponse<User> created = userService.create(
                 new User(request.getPseudo(), request.getEmail(), request.getPassword()));
         if (created.getData() == null) {
             return new ServiceResponse<>(created.getCode(), created.getMessage(), null);
         }
-        return new ServiceResponse<>("1000", "Succès de l'inscription.", null);
+
+        ServiceResponse<Void> initialized = authoritiesService.initialize(created.getData().getId());
+        if (initialized.getCode().equals("404")) {
+            return new ServiceResponse<>(initialized.getCode(), initialized.getMessage(), null);
+        }
+
+        return new ServiceResponse<>("1000", "Succès de l'inscription, vous pouvez maintenant vous connecter.", null);
     }
 
     /**
@@ -145,27 +152,6 @@ public class AuthServiceImpl implements IAuthService {
                         user.getPseudo(),
                         accessTokenExpiration,
                         mapRoles(user))
-        );
-    }
-
-    @Override
-    public ServiceResponse<AuthResponse> me(String userId) {
-        ServiceResponse<User> userResponse = userService.findById(UUID.fromString(userId));
-
-        if (userResponse.getData() == null) {
-            return new ServiceResponse<>("1101", "Compte introuvable", null);
-        }
-
-        User user = userResponse.getData();
-
-        return new ServiceResponse<>("1000", "Authentification réussie",
-                new AuthResponse(
-                        null,
-                        null,
-                        user.getId(),
-                        user.getPseudo(),
-                        0,
-                        user.getRoles().stream().map(Role::getCode).collect(Collectors.toList()))
         );
     }
 

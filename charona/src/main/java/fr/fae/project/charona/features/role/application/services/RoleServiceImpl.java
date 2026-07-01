@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class RoleService implements IRoleService {
+public class RoleServiceImpl implements IRoleService {
     
     private final IRoleRepository roleRepository;
     
-    public RoleService(IRoleRepository roleRepository) {
+    public RoleServiceImpl(IRoleRepository roleRepository) {
         this.roleRepository = roleRepository;
     }
     

@@ -1,14 +1,17 @@
 package fr.fae.project.charona.features.user.infrastructure.api.controllers;
 
+import fr.fae.project.charona.features.user.domain.services.IUserService;
+import fr.fae.project.charona.features.user.infrastructure.api.dtos.requests.ChangePasswordRequest;
 import fr.fae.project.charona.features.user.infrastructure.api.dtos.requests.UserCreateRequest;
+import fr.fae.project.charona.features.user.infrastructure.api.dtos.requests.UserMeUpdateRequest;
 import fr.fae.project.charona.features.user.infrastructure.api.dtos.requests.UserUpdateRequest;
 import fr.fae.project.charona.features.user.infrastructure.api.dtos.responses.UserPublicResponse;
 import fr.fae.project.charona.features.user.infrastructure.api.mappers.UserMapper;
 import fr.fae.project.charona.shared.ServiceResponse;
-import fr.fae.project.charona.features.user.domain.services.IUserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -104,6 +107,35 @@ public class UserController {
     @DeleteMapping("/{uuid}")
     public ResponseEntity<ServiceResponse<Void>> delete(@PathVariable UUID uuid) {
         return ResponseEntity.ok(IUserService.delete(uuid));
+    }
+
+    @GetMapping("/me")
+    public ResponseEntity<ServiceResponse<UserPublicResponse>> me(Authentication authentication) {
+        UUID id = UUID.fromString(authentication.getName());
+        return ResponseEntity.ok(
+                IUserService.findById(id).map(mapper::toUserResponse)
+        );
+    }
+
+    @PutMapping("/me")
+    public ResponseEntity<ServiceResponse<UserPublicResponse>> updateMe(
+            @Valid @RequestBody UserMeUpdateRequest request,
+            Authentication authentication) {
+        UUID id = UUID.fromString(authentication.getName());
+        return ResponseEntity.ok(
+                IUserService.updateOwnProfile(id, request.getPseudo(), request.getEmail())
+                        .map(mapper::toUserResponse)
+        );
+    }
+
+    @PutMapping("/me/password")
+    public ResponseEntity<ServiceResponse<Void>> changePassword(
+            @Valid @RequestBody ChangePasswordRequest request,
+            Authentication authentication) {
+        UUID id = UUID.fromString(authentication.getName());
+        return ResponseEntity.ok(
+                IUserService.changePassword(id, request.getCurrentPassword(), request.getNewPassword())
+        );
     }
 }
 

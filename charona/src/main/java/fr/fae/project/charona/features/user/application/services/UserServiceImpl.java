@@ -61,7 +61,7 @@ public class UserServiceImpl implements IUserService {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         User created = userRepository.save(user);
-        return new ServiceResponse<>("2000", "User created successfully", created);
+        return new ServiceResponse<>("2000", "Le compte a été créé avec succès", created);
     }
 
     @Override
@@ -86,9 +86,34 @@ public class UserServiceImpl implements IUserService {
                 .map(user -> {
                     iRefreshTokenService.revokeAllForUser(user);
                     userRepository.deleteById(id);
-                    return new ServiceResponse<Void>("2003", "User deleted successfully", null);
+                    return new ServiceResponse<Void>("2003", "L'utilisateur à bien été supprimé.", null);
                 })
-                .orElse(new ServiceResponse<>("2100", "User not found", null));
+                .orElse(new ServiceResponse<>("2100", "Utilisateur non valide", null));
+    }
+
+    @Override
+    public ServiceResponse<User> updateOwnProfile(UUID id, String pseudo, String email) {
+        return userRepository.findById(id)
+                .map(user -> {
+                    user.setPseudo(pseudo);
+                    user.setEmail(email);
+                    return update(user);
+                })
+                .orElse(new ServiceResponse<>("2100", "Utilisateur non valide", null));
+    }
+
+    @Override
+    public ServiceResponse<Void> changePassword(UUID id, String currentPassword, String newPassword) {
+        return userRepository.findById(id)
+                .map(user -> {
+                    if (!passwordEncoder.matches(currentPassword, user.getPassword())) {
+                        return new ServiceResponse<Void>("2103", "Mot de passe actuel incorrect", null);
+                    }
+                    user.setPassword(passwordEncoder.encode(newPassword));
+                    userRepository.save(user);
+                    return new ServiceResponse<Void>("2004", "Mot de passe modifié avec succès", null);
+                })
+                .orElse(new ServiceResponse<>("2100", "Utilisateur non valide", null));
     }
 
     @Override

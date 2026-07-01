@@ -16,6 +16,8 @@ public interface IUserService {
     ServiceResponse<User> create(User user);
     ServiceResponse<User> update(User user);
     ServiceResponse<Void> delete(UUID id);
+    ServiceResponse<User> updateOwnProfile(UUID id, String pseudo, String email);
+    ServiceResponse<Void> changePassword(UUID id, String currentPassword, String newPassword);
 
     // Utils
     boolean existsByPseudo(String pseudo);

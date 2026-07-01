@@ -7,4 +7,5 @@ import java.util.UUID;
 public interface IAuthoritiesService {
     ServiceResponse<Void> assignRole(UUID  userId, String roleCode);
     ServiceResponse<Void> revokeRole(UUID userId, String roleCode);
+    ServiceResponse<Void> initialize(UUID userId);
 }

@@ -1,9 +1,9 @@
 package fr.fae.project.charona.features.auth.infrastructure.api.controllers;
 
+import fr.fae.project.charona.features.auth.domain.services.IAuthService;
 import fr.fae.project.charona.features.auth.infrastructure.api.dto.requests.LoginRequest;
 import fr.fae.project.charona.features.auth.infrastructure.api.dto.requests.RegisterRequest;
 import fr.fae.project.charona.features.auth.infrastructure.api.dto.responses.AuthResponse;
-import fr.fae.project.charona.features.auth.domain.services.IAuthService;
 import fr.fae.project.charona.shared.ServiceResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.Duration;
@@ -97,18 +96,6 @@ public class AuthController {
 
         clearRefreshTokenCookie(response);
         return ResponseEntity.ok(new ServiceResponse<>("1001", "Logout successful", null));
-    }
-
-    @GetMapping("/me")
-    public ResponseEntity<ServiceResponse<AuthResponse>> me(
-            Authentication authentication
-    ){
-        if (authentication == null || !authentication.isAuthenticated()) {
-            return ResponseEntity
-                    .status(401)
-                    .body(new ServiceResponse<>("1300", "Access denied — not authenticated", null));
-        }
-        return ResponseEntity.ok(authService.me(authentication.getName()));
     }
 
     private void addRefreshTokenCookie(HttpServletResponse response, String token) {
