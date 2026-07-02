@@ -147,7 +147,7 @@ public class UserController {
     }
 
     @PutMapping("/me/password")
-    public ResponseEntity<ServiceResponse<Void>> changePassword(
+    public ResponseEntity<ServiceResponse<Boolean>> changePassword(
             @Valid @RequestBody ChangePasswordRequest request,
             Authentication authentication) {
         UUID id = UUID.fromString(authentication.getName());
