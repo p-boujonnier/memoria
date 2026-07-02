@@ -109,6 +109,14 @@ public class UserController {
         return ResponseEntity.ok(IUserService.delete(uuid));
     }
 
+    /**
+     * GET /api/users/me
+     * Retrieves the authenticated user's information.
+     *
+     * @param authentication the authentication object containing the user's UUID
+     * @return {@link ResponseEntity} containing a {@link ServiceResponse} with HTTP status 200,
+     *         or an error message if no user matches the provided UUID
+     */
     @GetMapping("/me")
     public ResponseEntity<ServiceResponse<UserPublicResponse>> me(Authentication authentication) {
         UUID id = UUID.fromString(authentication.getName());
@@ -117,6 +125,16 @@ public class UserController {
         );
     }
 
+
+    /**
+     * PUT /api/users/me
+     * Updates the authenticated user's information.
+     *
+     * @param request the request containing the updated user information
+     * @param authentication the authentication object containing the user's UUID
+     * @return {@link ResponseEntity} containing a {@link ServiceResponse} with HTTP status 200,
+     *         or an error message if no user matches the provided UUID
+     */
     @PutMapping("/me")
     public ResponseEntity<ServiceResponse<UserPublicResponse>> updateMe(
             @Valid @RequestBody UserMeUpdateRequest request,

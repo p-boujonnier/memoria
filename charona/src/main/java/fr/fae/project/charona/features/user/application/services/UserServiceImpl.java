@@ -103,17 +103,17 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public ServiceResponse<Void> changePassword(UUID id, String currentPassword, String newPassword) {
+    public ServiceResponse<Boolean> changePassword(UUID id, String currentPassword, String newPassword) {
         return userRepository.findById(id)
                 .map(user -> {
                     if (!passwordEncoder.matches(currentPassword, user.getPassword())) {
-                        return new ServiceResponse<Void>("2103", "Mot de passe actuel incorrect", null);
+                        return new ServiceResponse<Boolean>("2103", "Mot de passe actuel incorrect", null);
                     }
                     user.setPassword(passwordEncoder.encode(newPassword));
                     userRepository.save(user);
-                    return new ServiceResponse<Void>("2004", "Mot de passe modifié avec succès", null);
+                    return new ServiceResponse<>("2004", "Mot de passe modifié avec succès", true);
                 })
-                .orElse(new ServiceResponse<>("2100", "Utilisateur non valide", null));
+                .orElse(new ServiceResponse<>("2100", "User not found", null));
     }
 
     @Override
