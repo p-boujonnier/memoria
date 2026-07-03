@@ -39,6 +39,10 @@ jwt:
     expiration: 604800000
     cookie-secure: false
 
+
+fabula:
+  base-url: http://localhost:8081
+
 libria:
   base-url: http://localhost:8083
 
