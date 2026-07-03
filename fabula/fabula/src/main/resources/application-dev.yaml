@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/memoria
+    username: dev
+    password: dev
+
+internal:
+  token: dev-secret-token-provisoire
+
+logging:
+  level:
+    fr.fae.project.fabula: DEBUG
