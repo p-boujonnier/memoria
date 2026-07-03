@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@Profile({"jpa", "test"})
+@Profile({"jpa", "test", "dev"})
 @Repository
 public class PersonageRepositoryJpaAdapter implements IPersonageRepository {
 

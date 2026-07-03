@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-@Profile({"jpa", "test"})
+@Profile({"jpa", "test", "dev"})
 @Repository
 public class RoleRepositoryJpaAdapter implements IRoleRepository {
 

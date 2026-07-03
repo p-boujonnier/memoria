@@ -9,7 +9,7 @@ import org.springframework.web.client.RestClient;
 public class FabulaClientConfig {
 
     @Value("${fabula.base-url}")
-    private String fabulaClientUrl;
+    private String fabulaBaseUrl;
 
     @Value("${internal.token}")
     private String internalToken;
@@ -17,8 +17,8 @@ public class FabulaClientConfig {
     @Bean("fabulaRestClient")
     public RestClient fabulaRestClient() {
         return RestClient.builder()
-                .baseUrl(fabulaClientUrl)
-                .defaultHeader("Authorization", "Bearer " + internalToken)
+                .baseUrl(fabulaBaseUrl)
+                .defaultHeader("X-Internal-Token", internalToken)
                 .build();
     }
 }

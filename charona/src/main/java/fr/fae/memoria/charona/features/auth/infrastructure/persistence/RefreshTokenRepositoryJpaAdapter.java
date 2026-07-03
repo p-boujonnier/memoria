@@ -12,7 +12,7 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 
 @Repository
-@Profile({"jpa", "test"})
+@Profile({"jpa", "test", "dev"})
 public class RefreshTokenRepositoryJpaAdapter implements IRefreshTokenRepository {
 
     private static final Logger log = LoggerFactory.getLogger(RefreshTokenRepositoryJpaAdapter.class);

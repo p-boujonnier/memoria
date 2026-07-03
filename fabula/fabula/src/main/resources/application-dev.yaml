@@ -4,8 +4,17 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/memoria
-    username: dev
-    password: dev
+    username: fabula_app
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_schema: fabula
+        format_sql: true
+    show-sql: false
 
 internal:
   token: dev-secret-token-provisoire
