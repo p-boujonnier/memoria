@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cba2e92-fc12-46ae-8243-432ad9048dde" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-local.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/resources/application-dev.yaml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/application/services/NoteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/domain/models/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/domain/repositories/INoteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/domain/services/INoteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/infrastructure/persistence/NoteJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/infrastructure/persistence/NoteRepositoryJpaAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/infrastructure/persistence/NoteRepositoryMock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/master.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/note/001_create_notes_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/personage/001_create_personages_table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +23,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="7" />
+    <option name="cachedIndexableFilesCount" value="42" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -31,12 +51,12 @@
     }
   }
 }</component>
-  <component name="GitLabMergeRequestsSettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;first&quot;: &quot;https://gitlab.com/Faergoth/memoria.git&quot;,
-    &quot;second&quot;: &quot;254b5684-99f4-4d7b-b668-7e8cb1d2b760&quot;
+  <component name="GitLabMergeRequestsSettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "first": "https://gitlab.com/Faergoth/memoria.git",
+    "second": "43d1fc7b-a437-4006-8e19-552350457454"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -61,6 +81,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.FabulaApplication (1).executor": "Run",
     "Spring Boot.FabulaApplication.executor": "Run",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
@@ -82,25 +103,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="FabulaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="FabulaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="jpa, dev" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="fabula.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.fae.project.fabula.FabulaApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.fae.project.fabula.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.fae.memoria.fabula.FabulaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.FabulaApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -118,6 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1783062317308</updated>
       <workItem from="1783062318371" duration="831000" />
+      <workItem from="1783203377224" duration="1930000" />
     </task>
     <servers />
   </component>
