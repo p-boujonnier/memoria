@@ -5,72 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cba2e92-fc12-46ae-8243-432ad9048dde" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/CharonaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/CharonaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/application/services/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/application/services/AuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/application/services/RefreshTokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/application/services/RefreshTokenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/domain/models/RefreshToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/domain/models/RefreshToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/domain/repositories/IRefreshTokenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/domain/repositories/IRefreshTokenRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/domain/services/IAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/domain/services/IAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/domain/services/IRefreshTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/domain/services/IRefreshTokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/infrastructure/api/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/infrastructure/api/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/infrastructure/api/dto/requests/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/infrastructure/api/dto/requests/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/infrastructure/api/dto/requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/infrastructure/api/dto/requests/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/infrastructure/api/dto/responses/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/infrastructure/api/dto/responses/AuthResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/infrastructure/persistence/RefreshTokenJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/infrastructure/persistence/RefreshTokenJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/infrastructure/persistence/RefreshTokenRepositoryJpaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/infrastructure/persistence/RefreshTokenRepositoryJpaAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/auth/infrastructure/persistence/RefreshTokenRepositoryMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/auth/infrastructure/persistence/RefreshTokenRepositoryMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/role/application/services/AuthoritiesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/role/application/services/AuthoritiesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/role/application/services/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/role/application/services/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/role/domain/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/role/domain/models/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/role/domain/repositories/IRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/role/domain/repositories/IRoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/role/domain/services/IAuthoritiesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/role/domain/services/IAuthoritiesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/role/domain/services/IRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/role/domain/services/IRoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/role/infrastructure/persistence/RoleJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/role/infrastructure/persistence/RoleJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/role/infrastructure/persistence/RoleRepositoryJpaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/role/infrastructure/persistence/RoleRepositoryJpaAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/role/infrastructure/persistence/RoleRepositoryMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/role/infrastructure/persistence/RoleRepositoryMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/application/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/application/services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/domain/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/domain/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/domain/repositories/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/domain/repositories/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/domain/services/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/domain/services/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/infrastructure/api/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/infrastructure/api/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/infrastructure/api/dtos/requests/ChangePasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/infrastructure/api/dtos/requests/ChangePasswordRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/infrastructure/api/dtos/requests/UserCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/infrastructure/api/dtos/requests/UserCreateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/infrastructure/api/dtos/requests/UserMeUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/infrastructure/api/dtos/requests/UserMeUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/infrastructure/api/dtos/requests/UserUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/infrastructure/api/dtos/requests/UserUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/infrastructure/api/dtos/responses/UserPublicResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/infrastructure/api/dtos/responses/UserPublicResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/infrastructure/api/mappers/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/infrastructure/api/mappers/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/infrastructure/persistence/UserJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/infrastructure/persistence/UserJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/infrastructure/persistence/UserRepositoryJpaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/infrastructure/persistence/UserRepositoryJpaAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/features/user/infrastructure/persistence/UserRepositoryMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/features/user/infrastructure/persistence/UserRepositoryMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/fabula/application/services/PersonageProxyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/application/services/PersonageProxyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/fabula/infrastructure/api/controllers/PersonageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/infrastructure/api/controllers/PersonageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/fabula/infrastructure/api/dtos/requests/PersonageCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/infrastructure/api/dtos/requests/PersonageCreateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/fabula/infrastructure/api/dtos/requests/PersonageUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/infrastructure/api/dtos/requests/PersonageUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/fabula/infrastructure/api/dtos/responses/PersonageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/infrastructure/api/dtos/responses/PersonageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/fabula/infrastructure/clients/FabulaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/infrastructure/clients/FabulaClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/fabula/infrastructure/configs/FabulaClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/infrastructure/configs/FabulaClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/libria/infrastructure/api/controllers/LibriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/libria/infrastructure/api/controllers/LibriaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/libria/infrastructure/api/dtos/MagazineDetailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/libria/infrastructure/api/dtos/MagazineDetailDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/libria/infrastructure/api/dtos/MagazineListItemDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/libria/infrastructure/api/dtos/MagazineListItemDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/libria/infrastructure/clients/LibriaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/libria/infrastructure/clients/LibriaClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/gateway/libria/infrastructure/configs/LibriaClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/libria/infrastructure/configs/LibriaClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/security/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/security/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/security/jwt/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/security/jwt/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/seeder/DatabaseSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/seeder/DatabaseSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/seeder/UserSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/seeder/UserSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/shared/AuthUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/shared/AuthUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/shared/ServiceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/shared/ServiceResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/shared/exceptions/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/shared/exceptions/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/project/charona/shared/exceptions/dtos/FieldValidationError.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/shared/exceptions/dtos/FieldValidationError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/test/java/fr/fae/project/charona/CharonaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/test/java/fr/fae/memoria/charona/CharonaApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charona/src/test/java/fr/fae/project/charona/features/role/domain/models/RoleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/test/java/fr/fae/memoria/charona/features/role/domain/models/RoleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/fae/project/fabula/common/ServiceResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/fae/project/fabula/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/fae/project/fabula/personage/domain/repositories/PersonageJpaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/fae/project/fabula/personage/seeder/PersonageSeeder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/fae/project/fabula/seeder/DatabaseSeeder.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-local.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charona/src/main/resources/application-dev.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,29 +21,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitLabMergeRequestFiltersHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPENED",
-    "assignee": {
-      "type": "org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue",
-      "username": "Faergoth",
-      "fullname": "Pierre BOUJONNIER"
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;assignee&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,
+      &quot;username&quot;: &quot;Faergoth&quot;,
+      &quot;fullname&quot;: &quot;Pierre BOUJONNIER&quot;
     }
   }
-}]]></component>
-  <component name="GitLabMergeRequestsSettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "first": "https://gitlab.com/Faergoth/memoria.git",
-    "second": "254b5684-99f4-4d7b-b668-7e8cb1d2b760"
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;https://gitlab.com/Faergoth/memoria.git&quot;,
+    &quot;second&quot;: &quot;254b5684-99f4-4d7b-b668-7e8cb1d2b760&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="3FyzuEkQNgpkDwocSBgZKxQTgQP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -114,11 +51,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build fabula.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.FabulaApplication.executor": "Run",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
@@ -137,6 +80,27 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\memoria\fabula\src\main\java\fr\fae\memoria\fabula\features" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FabulaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="fabula.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.fae.project.fabula.FabulaApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.fae.project.fabula.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.FabulaApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
