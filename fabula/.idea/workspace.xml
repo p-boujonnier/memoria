@@ -5,17 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cba2e92-fc12-46ae-8243-432ad9048dde" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/application/services/NoteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/domain/models/Note.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/domain/repositories/INoteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/domain/services/INoteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/infrastructure/persistence/NoteJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/infrastructure/persistence/NoteRepositoryJpaAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/infrastructure/persistence/NoteRepositoryMock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/master.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/note/001_create_notes_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/personage/001_create_personages_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/note/api/controllers/NoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/note/api/dtos/requests/NoteCreateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/note/api/dtos/requests/NoteUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/note/api/dtos/responses/NoteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/note/infrastructure/clients/NoteClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/note/infrastructure/configs/NoteClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/note/services/NoteProxyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/infrastructure/api/controllers/NoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/infrastructure/api/dtos/requests/NoteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/infrastructure/api/dtos/responses/NoteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/infrastructure/api/mappers/NoteMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/api/controllers/PersonageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/personage/api/controllers/PersonageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/api/dtos/requests/PersonageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/personage/api/dtos/requests/PersonageRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/api/dtos/responses/PersonageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/personage/api/dtos/responses/PersonageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/infrastructure/clients/FabulaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/personage/infrastructure/clients/PersonageClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/infrastructure/configs/FabulaClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/personage/infrastructure/configs/FabulaClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/services/PersonageProxyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charona/src/main/java/fr/fae/memoria/charona/gateway/fabula/personage/services/PersonageProxyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/application/services/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/application/services/NoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/domain/services/INoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/fae/memoria/fabula/features/note/domain/services/INoteService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +32,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="42" />
+    <option name="cachedIndexableFilesCount" value="47" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -34,6 +43,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -51,12 +61,12 @@
     }
   }
 }</component>
-  <component name="GitLabMergeRequestsSettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "first": "https://gitlab.com/Faergoth/memoria.git",
-    "second": "43d1fc7b-a437-4006-8e19-552350457454"
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;https://gitlab.com/Faergoth/memoria.git&quot;,
+    &quot;second&quot;: &quot;43d1fc7b-a437-4006-8e19-552350457454&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -69,34 +79,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build fabula.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.FabulaApplication (1).executor": "Run",
-    "Spring Boot.FabulaApplication.executor": "Run",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/memoria/fabula",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build fabula.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.FabulaApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.FabulaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/memoria/fabula&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\memoria\fabula\src\main\java\fr\fae\memoria\fabula\features" />
@@ -130,6 +140,7 @@
       <updated>1783062317308</updated>
       <workItem from="1783062318371" duration="831000" />
       <workItem from="1783203377224" duration="1930000" />
+      <workItem from="1783231277396" duration="8328000" />
     </task>
     <servers />
   </component>

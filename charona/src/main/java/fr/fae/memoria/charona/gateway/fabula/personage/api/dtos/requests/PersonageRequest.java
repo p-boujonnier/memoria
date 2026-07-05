@@ -1,4 +1,4 @@
-package fr.fae.memoria.charona.gateway.fabula.api.dtos.requests;
+package fr.fae.memoria.charona.gateway.fabula.personage.api.dtos.requests;
 
 import jakarta.validation.constraints.*;
 

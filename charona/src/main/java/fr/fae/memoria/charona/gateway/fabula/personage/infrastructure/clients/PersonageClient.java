@@ -1,7 +1,7 @@
-package fr.fae.memoria.charona.gateway.fabula.infrastructure.clients;
+package fr.fae.memoria.charona.gateway.fabula.personage.infrastructure.clients;
 
-import fr.fae.memoria.charona.gateway.fabula.api.dtos.requests.PersonageRequest;
-import fr.fae.memoria.charona.gateway.fabula.api.dtos.responses.PersonageResponse;
+import fr.fae.memoria.charona.gateway.fabula.personage.api.dtos.requests.PersonageRequest;
+import fr.fae.memoria.charona.gateway.fabula.personage.api.dtos.responses.PersonageResponse;
 import fr.fae.memoria.charona.shared.ServiceResponse;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
@@ -12,11 +12,11 @@ import java.util.List;
 import java.util.UUID;
 
 @Component
-public class FabulaClient {
+public class PersonageClient {
 
     private final RestClient restClient;
 
-    public FabulaClient(@Qualifier("fabulaRestClient") RestClient restClient) {
+    public PersonageClient(@Qualifier("personageRestClient") RestClient restClient) {
         this.restClient = restClient;
     }
 

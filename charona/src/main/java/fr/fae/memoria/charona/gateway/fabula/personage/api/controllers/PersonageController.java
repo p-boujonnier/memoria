@@ -1,8 +1,8 @@
-package fr.fae.memoria.charona.gateway.fabula.api.controllers;
+package fr.fae.memoria.charona.gateway.fabula.personage.api.controllers;
 
-import fr.fae.memoria.charona.gateway.fabula.api.dtos.requests.PersonageRequest;
-import fr.fae.memoria.charona.gateway.fabula.api.dtos.responses.PersonageResponse;
-import fr.fae.memoria.charona.gateway.fabula.services.PersonageProxyService;
+import fr.fae.memoria.charona.gateway.fabula.personage.api.dtos.requests.PersonageRequest;
+import fr.fae.memoria.charona.gateway.fabula.personage.api.dtos.responses.PersonageResponse;
+import fr.fae.memoria.charona.gateway.fabula.personage.services.PersonageProxyService;
 import fr.fae.memoria.charona.shared.ServiceResponse;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

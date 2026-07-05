@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 public interface INoteService {
-    ServiceResponse<Note> create(Note note);
+    ServiceResponse<Note> create(Note note, UUID authorId);
 
     ServiceResponse<Note> findById(UUID id);
 
@@ -17,7 +17,7 @@ public interface INoteService {
 
     ServiceResponse<List<Note>> findBySubject(String subject);
 
-    ServiceResponse<Note> update(UUID id, Note entity);
+    ServiceResponse<Note> update(UUID id, Note entity, UUID authorId);
 
     ServiceResponse<Boolean> delete(UUID id);
 }

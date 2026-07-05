@@ -1,8 +1,8 @@
-package fr.fae.memoria.charona.gateway.fabula.services;
+package fr.fae.memoria.charona.gateway.fabula.personage.services;
 
-import fr.fae.memoria.charona.gateway.fabula.api.dtos.requests.PersonageRequest;
-import fr.fae.memoria.charona.gateway.fabula.api.dtos.responses.PersonageResponse;
-import fr.fae.memoria.charona.gateway.fabula.infrastructure.clients.FabulaClient;
+import fr.fae.memoria.charona.gateway.fabula.personage.api.dtos.requests.PersonageRequest;
+import fr.fae.memoria.charona.gateway.fabula.personage.api.dtos.responses.PersonageResponse;
+import fr.fae.memoria.charona.gateway.fabula.personage.infrastructure.clients.PersonageClient;
 import fr.fae.memoria.charona.shared.ServiceResponse;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +12,9 @@ import java.util.UUID;
 @Service
 public class PersonageProxyService {
 
-    private final FabulaClient fabulaClient;
+    private final PersonageClient fabulaClient;
 
-    public PersonageProxyService(FabulaClient fabulaClient) {
+    public PersonageProxyService(PersonageClient fabulaClient) {
         this.fabulaClient = fabulaClient;
     }
 

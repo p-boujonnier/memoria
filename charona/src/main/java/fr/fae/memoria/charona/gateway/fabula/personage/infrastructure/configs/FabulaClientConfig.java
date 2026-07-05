@@ -1,4 +1,4 @@
-package fr.fae.memoria.charona.gateway.fabula.infrastructure.configs;
+package fr.fae.memoria.charona.gateway.fabula.personage.infrastructure.configs;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +14,7 @@ public class FabulaClientConfig {
     @Value("${internal.token}")
     private String internalToken;
 
-    @Bean("fabulaRestClient")
+    @Bean("personageRestClient")
     public RestClient fabulaRestClient() {
         return RestClient.builder()
                 .baseUrl(fabulaBaseUrl)

@@ -1,4 +1,4 @@
-package fr.fae.memoria.charona.gateway.fabula.api.dtos.responses;
+package fr.fae.memoria.charona.gateway.fabula.personage.api.dtos.responses;
 
 import java.util.UUID;
 
