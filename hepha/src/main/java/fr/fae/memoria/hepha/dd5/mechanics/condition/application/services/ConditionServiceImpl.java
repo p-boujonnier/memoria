@@ -19,7 +19,7 @@ public class ConditionServiceImpl implements IConditionService {
     }
 
     @Override
-    public ServiceResponse<Condition> save(Condition condition) {
+    public ServiceResponse<Condition> create(Condition condition) {
         try {
             return new ServiceResponse<>("201", "Condition créé avec succès", conditionRepository.save(condition));
         } catch (Exception e) {
@@ -28,20 +28,27 @@ public class ConditionServiceImpl implements IConditionService {
     }
 
     @Override
-    public ServiceResponse<Condition> findById(UUID id) {
+    public ServiceResponse<Condition> update(UUID id, Condition condition) {
         try {
             return conditionRepository.findById(id)
-                    .map(condition -> new ServiceResponse<>("200", "Condition trouvée avec succès", condition))
+                    .map(existing -> {
+                        existing.setIndex(condition.getIndex());
+                        existing.setNameEn(condition.getNameEn());
+                        existing.setNameFr(condition.getNameFr());
+                        existing.setDescEn(condition.getDescEn());
+                        existing.setDescFr(condition.getDescFr());
+                        return new ServiceResponse<>("200", "Condition mise à jour avec succès", conditionRepository.save(existing));
+                    })
                     .orElse(new ServiceResponse<>("404", "Condition introuvable", null));
         } catch (Exception e) {
-            return new ServiceResponse<>("500", "Une erreur est survenue lors de la recherche de la condition", null);
+            return new ServiceResponse<>("500", "Une erreur est survenue lors de la mise à jour de la condition", null);
         }
     }
 
     @Override
-    public ServiceResponse<Condition> findByIndex(String index) {
+    public ServiceResponse<Condition> findById(UUID id) {
         try {
-            return conditionRepository.findByIndex(index)
+            return conditionRepository.findById(id)
                     .map(condition -> new ServiceResponse<>("200", "Condition trouvée avec succès", condition))
                     .orElse(new ServiceResponse<>("404", "Condition introuvable", null));
         } catch (Exception e) {

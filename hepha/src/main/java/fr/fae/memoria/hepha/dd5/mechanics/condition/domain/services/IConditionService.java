@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.UUID;
 
 public interface IConditionService {
-    ServiceResponse<Condition> save(Condition condition);
+    ServiceResponse<Condition> create(Condition condition);
+    ServiceResponse<Condition> update(UUID id, Condition condition);
     ServiceResponse<Condition> findById(UUID id);
-    ServiceResponse<Condition> findByIndex(String index);
     ServiceResponse<List<Condition>> findAll();
     ServiceResponse<Void> deleteById(UUID id);
 }

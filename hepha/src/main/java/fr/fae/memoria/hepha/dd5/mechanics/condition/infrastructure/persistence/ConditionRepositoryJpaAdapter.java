@@ -28,11 +28,6 @@ public class ConditionRepositoryJpaAdapter implements IConditionRepository {
     }
 
     @Override
-    public Optional<Condition> findByIndex(String index) {
-        return conditionJpaRepository.findByIndex(index);
-    }
-
-    @Override
     public List<Condition> findAll() {
         return conditionJpaRepository.findAll();
     }

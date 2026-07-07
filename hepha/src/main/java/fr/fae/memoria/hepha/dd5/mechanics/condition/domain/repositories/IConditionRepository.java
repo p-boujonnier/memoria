@@ -11,8 +11,6 @@ public interface IConditionRepository {
 
     Optional<Condition> findById(UUID id);
 
-    Optional<Condition> findByIndex(String index);
-
     List<Condition> findAll();
 
     void deleteById(UUID id);
